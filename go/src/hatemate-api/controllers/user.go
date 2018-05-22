@@ -33,6 +33,13 @@ func (uc *UserController) Get() {
 	uc.ServeJSON()
 }
 
+// Get All user
+func (uc *UserController) GetAllUserController() {
+	users := models.GetAllUser()
+	uc.Data["json"] = users
+	uc.ServeJSON()
+}
+
 // Insert user
 func (uc *UserController) Insert() {
 	var user models.HateMateUser

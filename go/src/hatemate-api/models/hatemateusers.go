@@ -16,3 +16,10 @@ type HateMateUser struct {
 func init() {
 	orm.RegisterModel(new(HateMateUser))
 }
+
+func GetAllUser() []HateMateUser {
+	o := orm.NewOrm()
+	var users []HateMateUser
+	_, _ = o.QueryTable("hate_mate_user").All(&users)
+	return users
+}
