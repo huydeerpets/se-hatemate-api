@@ -1,4 +1,4 @@
-package hatemateusers
+package models
 
 import (
 	"github.com/astaxie/beego/orm"

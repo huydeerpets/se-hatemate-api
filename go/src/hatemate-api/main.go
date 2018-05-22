@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "hatemate-api/models"
 	_ "hatemate-api/routers"
 
 	"github.com/astaxie/beego"
@@ -13,7 +14,7 @@ func init() {
 	orm.RegisterDataBase(
 		"default",
 		"postgres",
-		"user=xxx password=xxx host=127.0.0.1 port=5432 dbname=gotest sslmode=disable")
+		"user=HateMate password=HateMateApp123 host=35.198.207.177 port=5432 dbname=HateMateDB sslmode=disable")
 
 	orm.RunSyncdb("default", false, true)
 }
